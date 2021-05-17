@@ -26,7 +26,7 @@ requirements:
     - wheel {{ wheel }} 
     - cython {{ cython }}
   run:
-    - python {{ pytt on }}
+    - python {{ pyton }}
 
 test:
   imports:
