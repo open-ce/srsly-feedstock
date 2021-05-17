@@ -1,7 +1,6 @@
 # adapted from the conda-forge srsly recipe
 {% set name = "srsly" %}
 {% set version = "1.0.4" %}
-#test change
 
 package:
   name: {{ name|lower }}
@@ -12,7 +11,7 @@ source:
   git_rev: v{{ version }}
 
 build:
-  number: 2
+  number: 3 
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -27,7 +26,7 @@ requirements:
     - wheel {{ wheel }} 
     - cython {{ cython }}
   run:
-    - python {{ python }}
+    - python {{ pyton }}
 
 test:
   imports:
