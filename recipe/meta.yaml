@@ -28,11 +28,18 @@ requirements:
     - setuptools {{ setuptools }}
     - wheel {{ wheel }} 
     - cython {{ cython }}
+    # Use pins to control cos6/cos7 match
+    - libgcc-ng  {{ libgcc }}
+    - libstdcxx-ng  {{ libstdcxx }}
   run:
     - python {{ python }}
 
 test:
-  imports:
+   requires:
+    # Use pins to control cos6/cos7 match
+    - libgcc-ng  {{ libgcc }}
+    - libstdcxx-ng  {{ libstdcxx }}
+   imports:
     - srsly
     - srsly.tests
 
