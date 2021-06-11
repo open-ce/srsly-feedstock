@@ -41,7 +41,7 @@ requirements:
     - libstdcxx-ng  =={{ libstdcxx }}
 
 test:
-   imports:
+  imports:
     - srsly
     - srsly.tests
 
