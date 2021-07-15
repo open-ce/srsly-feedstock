@@ -11,11 +11,8 @@ source:
   git_rev: v{{ version }}
 
 build:
-  number: 3
+  number: 4
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  ignore_run_exports:
-    - libgcc-ng
-    - libstdcxx-ng
 
 requirements:
   build:
@@ -36,9 +33,6 @@ requirements:
     - libstdcxx-ng  {{ libstdcxx }}
   run:
     - python {{ python }}
-    # Use pins to control cos6/cos7 match
-    - libgcc-ng  {{ libgcc }}
-    - libstdcxx-ng  {{ libstdcxx }}
 
 test:
   imports:
